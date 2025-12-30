@@ -1,0 +1,191 @@
+/* --- KLEUREN & BASISSTIJLEN --- */
+:root {
+    --bg-dark: #0c1226;
+    --bg-panel: #111A33;
+    --text-light: #ffffff;
+    --text-muted: #9aa7c6;
+    --yellow: #f2c84b;
+    --green: #3ecf5b;
+    --red: #ff4d4d;
+    --blue: #2f80ed;
+    --border-blue: #2e62ff;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* ========== ALGEMENE PANELEN ========== */
+
+.panel {
+    background: var(--bg-panel);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* TITELS */
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.title-yellow {
+    color: var(--yellow);
+}
+
+/* ========== VERTREKBORD (SCHERM 1) ========== */
+
+.departures-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.departures-table th {
+    text-align: left;
+    color: var(--yellow);
+    font-weight: 600;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.departures-table td {
+    padding: 16px 0;
+}
+
+.row {
+    background: rgba(255,255,255,0.03);
+}
+
+.ic-label {
+    background: var(--blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+}
+
+.spoor-label {
+    background: var(--yellow);
+    padding: 4px 14px;
+    border-radius: 6px;
+    color: black;
+    font-weight: 700;
+}
+
+.status-ontijd {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.status-delay {
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* ========== SCHERM 2: Perron (treininfo) ========== */
+
+.train-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.train-destination {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.stop-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.stop-table td {
+    padding: 14px 10px;
+    background: rgba(255,255,255,0.05);
+    margin-bottom: 6px;
+}
+
+.train-info-chip {
+    font-size: 14px;
+    background: var(--blue);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* ========== SCHERM 3: wagons ========== */
+
+.wagon-container {
+    display: flex;
+    gap: 15px;
+}
+
+.wagon {
+    width: 70px;
+    border: 2px solid var(--border-blue);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.03);
+}
+
+.wagon.first-class {
+    background: #b369ff44;
+    border-color: #c38bff;
+}
+
+.wagon.second-class {
+    background: #2f80ed33;
+}
+
+.wagon-icon {
+    font-size: 20px;
+    margin-top: 5px;
+    color: var(--yellow);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.legend-icon {
+    color: var(--yellow);
+    font-size: 18px;
+}
+
+/* ========== TREINSAMENSTELLING PANEL ========== */
+
+.badge {
+    padding: 6px 12px;
+    background: var(--blue);
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+/* ========== FOOTER NOTITIES ========== */
+
+.notes {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+

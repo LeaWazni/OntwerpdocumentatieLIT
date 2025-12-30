@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 - Treinborden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-down': 'fadeInDown 0.8s ease',
+                    },
+                    keyframes: {
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            background: linear-gradient(135deg, rgb(26, 27, 74) 0%, rgb(15, 32, 68) 100%);
+            min-height: 100vh;
+        }
+        /* Shine overlay animation */
+        .shine-overlay {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transition: all 0.6s ease;
+            pointer-events: none;
+        }
+        .image-wrapper:hover .shine-overlay {
+            top: 100%;
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="text-white font-['Segoe_UI',Tahoma,Geneva,Verdana,sans-serif] p-5 leading-relaxed">
+    <div class="max-w-[1400px] mx-auto bg-[rgba(40,42,90,0.6)] p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
+        <!-- Header -->
+        <h1 class="text-5xl font-bold text-white mb-8" style="text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);">
+            Week 3
+        </h1>
+        
+        <!-- Balk -->
+        <div class="bg-[rgba(52,152,219,0.3)] text-white text-xl py-3 px-6 rounded-lg mb-8 border-l-4 border-[#3498db]">
+             Treinborden in Figma starten
+        </div>
+        
+        <!-- Intro Text -->
+        <p class="text-base text-white/90 leading-loose mb-12 max-w-[800px]">
+            Deze week heb ik drie verschillende treinborden ontworpen in Figma: 
+            een vertrekbord, een perronscherm, en een wagonindelingsscherm. 
+            Elk bord heeft zijn eigen functie en stijl, maar ze delen dezelfde visuele identiteit.
+        </p>
+
+        <!-- LINEAIRE LAYOUT: UITLEG - FOTO - UITLEG - FOTO - UITLEG - FOTO - TEKSTJE -->
+        <div class="space-y-8">
+            
+            <!-- 1. UITLEG VERTREKBORD -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="flex items-center gap-2 text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Vertrekbord
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p class="font-semibold">Waarom heb ik deze kleuren gekozen?</p>
+                    
+                    <p><strong>Donkerblauw als basis:</strong> Een donkere achtergrond zorgt ervoor dat alle informatie goed opvalt
+                    en makkelijk te lezen is, ook van een afstandje. Blauw voelt rustig en betrouwbaar aan, wat
+                    goed past bij het openbaar vervoer. Het voorkomt ook dat het scherm te fel is of te veel afleidt.</p>
+                   
+                    <p><strong>Geel voor de belangrijke stukken:</strong> De titel en de spoornummers zijn geel, omdat dit meteen je aandacht
+                    trekt. Als reiziger wil je vooral snel weten: naar welk spoor moet ik? Geel helpt om die info direct
+                    te spotten.</p>
+                   
+                    <p><strong>Groen voor "Op tijd":</strong> Groen betekent voor iedereen: alles is goed. Door treinen die op tijd zijn groen
+                    te markeren, zie je in één blik dat je je geen zorgen hoeft te maken.</p>
+                   
+                    <p><strong>Rood voor vertragingen:</strong> Rood is een kleur die waarschuwt en aandacht vraagt. Door vertragingen in het
+                    rood te tonen, wordt het duidelijk dat er iets anders is dan normaal. Dit helpt reizigers om snel te zien
+                    dat ze mogelijk hun plannen moeten aanpassen.</p>
+                   
+                    <p><strong>Wit voor de rest:</strong> De overige teksten zijn wit, omdat dit een neutrale kleur is die goed contrasteert met
+                    de donkere achtergrond. Het zorgt ervoor dat alle informatie duidelijk leesbaar is zonder te veel afleiding.</p>
+                    
+                    <p>Eigenlijk zorgt dit kleurensysteem ervoor dat je zonder na te denken begrijpt wat er aan de hand is en dat
+                    is precies wat je wilt als je snel je trein moet halen.</p>
+                </div>
+            </div>
+
+            <!-- FOTO VERTREKBORD -->
+            <div class="flex justify-center">
+                <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                     onclick="openModal('vertrekbord.jpg', 'Vertrekbord')">
+                    <img src="vertrekbord.jpg" 
+                         alt="Vertrekbord" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="shine-overlay"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                            🔍 Klik
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. UITLEG PERRONSCHERM -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="flex items-center gap-2 text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Perronscherm
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p class="font-semibold">Waarom heb ik deze kleuren en layout gekozen?</p>
+                    
+                    <p><strong>Donkerblauw als basis:</strong> Net zoals bij het vertrekbord gebruik ik ook hier donkerblauw als achtergrond. Zoals ik al zei zorgt dit voor rust en goede leesbaarheid, wat belangrijk is als je snel informatie moet kunnen scannen.</p>
+                   
+                    <p><strong>Verticale layout met stations:</strong> In tegenstelling tot het vertrekbord, waar je horizontaal door de informatie gaat, werkt dit perronscherm verticaal. Je leest van boven naar beneden welke stations de trein aandoet. Dit past beter bij hoe mensen op een perron kijken – je zoekt gewoon jouw station in de lijst.</p>
+                   
+                    <p><strong>Geel voor de tijden:</strong> De aankomsttijden zijn opvallend oranje/geel, zodat je meteen ziet hoe laat de trein bij elk station is. Dit trekt meer aandacht dan wit, omdat het de belangrijkste info is als je al weet waar je naartoe gaat.</p>
+                   
+                    <p><strong>Badges onderaan voor faciliteiten:</strong> Onderaan staan handige icoontjes in lichtblauw voor extra info zoals klasse en toegankelijkheid. Deze staan apart omdat het bonus-informatie is niet iedereen hoeft dit te weten, maar als je het zoekt vind je het makkelijk.</p>
+                    
+                    <p>Door deze verticale opbouw met duidelijke kleuraccenten weet je in een paar seconden of jouw station erbij zit en hoe laat je aankomt.</p>
+                </div>
+            </div>
+
+            <!-- FOTO PERRONSCHERM -->
+            <div class="flex justify-center">
+                <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                     onclick="openModal('perronscherm.jpg', 'Perronscherm')">
+                    <img src="perronscherm.jpg" 
+                         alt="Perronscherm" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="shine-overlay"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                            🔍 Klik
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. UITLEG WAGONINDELING -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="flex items-center gap-2 text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Wagonindeling
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                 <p class="font-semibold max-w-800px">Waarom heb ik deze kleuren en layout gekozen?</p>
+                  
+                    <p><strong>Donkerblauw en geel:</strong> Net zoals bij de andere borden gebruik ik donkerblauw als basis en geel voor de titel. Zoals ik eerder al zei werkt dit gewoon goed voor leesbaarheid en past het bij de huisstijl van treinborden.</p>
+                   
+                    <p><strong>Visuele weergave in plaats van een lijst:</strong> Dit scherm is heel anders dan de vorige twee. In plaats van tekst in rijen gebruik ik hier een grafische weergave van de trein zelf. Je ziet letterlijk de wagons van 1 tot 8 staan, wat direct duidelijk maakt waar je moet gaan staan op het perron. Mensen begrijpen plaatjes sneller dan tekst, zeker als je haast hebt.</p>
+                   
+                    <p><strong>Paars voor 1ste klas, blauw voor 2de klas:</strong> Dit is een klassiek onderscheid in treinen. Paars voelt een beetje exclusiever en luxer, terwijl blauw gewoon standaard is. Door wagon 1 en 2 paars te maken zie je meteen waar de 1ste klas zit.</p>
+                   
+                    <p><strong>Icoontjes op de wagons:</strong> Elk wagontje heeft kleine icoontjes die laten zien welke faciliteiten er zijn – WiFi, Bar, Fietsplaatsen, Toegankelijkheid. Dit is super handig als je bijvoorbeeld met een fiets reist of de bar zoekt. Je hoeft niet te lezen, je ziet gewoon het symbool.</p>
+                   
+                    <p><strong>Links de badges, rechts de legenda:</strong> De blauwe badges links laten zien wat de trein allemaal heeft, en rechts staat een legenda voor extra voorzieningen. Alles staat logisch verdeeld zodat je scherm niet te vol wordt.</p>
+                    
+                    <p>Door deze visuele aanpak snap je in een paar seconden hoe de trein eruitziet en waar jij het beste kunt instappen.</p>
+                </div>
+            </div>
+
+            <!-- FOTO WAGONINDELING -->
+            <div class="flex justify-center">
+                <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                     onclick="openModal('wagonindeling.jpg', 'Wagonindeling')">
+                    <img src="wagonindeling.jpg" 
+                         alt="Wagonindeling" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="shine-overlay"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                            🔍 Klik
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLOT TEKSTJE -->
+            <div class="mt-8 p-6 bg-[rgba(20,25,60,0.4)] rounded-xl border-l-4 border-[#3498db]">
+                <h3 class="text-xl text-[#3498db] mb-3 font-semibold">Conclusie</h3>
+                <p class="max-w-[800px]">
+                    Bij het maken van deze drie treinborden heb ik vooral gefocust op duidelijkheid en snelle leesbaarheid. 
+                    Door een consistente kleurkeuze te gebruiken maar de layout per bord aan te passen aan de functie, 
+                    heb ik geprobeerd om reizigers zo efficiënt mogelijk te informeren. Het vertrekbord geeft een snel 
+                    overzicht, het perronscherm gaat dieper in op één specifieke trein, en de wagonindeling werkt vooral 
+                    visueel. Elk bord heeft zijn eigen doel, maar samen vormen ze een logisch geheel. 
+                </p>
+            </div>
+
+        </div>
+         <!-- Footer -->
+        <div class="mt-12 pt-8 border-t border-[rgba(52,152,219,0.3)] text-center text-white/60 text-sm">
+            Week 3 - Prototyping Tools Opdracht - Lea Christodoulou Wazni GDM1
+        </div>
+
+      <!-- Navigatie Knoppen -->
+        <div class="flex justify-between items-center mt-10">
+            <!-- Terug Knop Links -->
+            <a href="../index.html" 
+               class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                <span class="inline-block transition-transform">←</span>
+                Terug naar Overzicht
+            </a>
+            
+            <!-- Vorige + Volgende Knoppen Rechts -->
+            <div class="flex gap-3">
+                <a href="../week2/week2.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    <span class="inline-block transition-transform">←</span>
+                    Vorige Week
+                </a>
+                
+                <a href="../week4/week4.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    Volgende Week
+                    <span class="inline-block transition-transform">→</span>
+                </a>
+            </div>
+    </div>
+
+    <!-- IMAGE MODAL (IETSJE GROTER - 500px) -->
+    <div id="imageModal" 
+         style="display: none;"
+         class="fixed inset-0 bg-black/85 z-50 items-center justify-center p-8"
+         onclick="closeModal()">
+        <div class="relative max-w-[500px] max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <button onclick="closeModal()" 
+                    class="absolute -top-10 right-0 text-white text-2xl hover:text-[#3498db] transition-all duration-300 hover:rotate-90 hover:scale-110">
+                ✕
+            </button>
+            <!-- Image (IETSJE GROTER - 500px breed, max 85vh hoog) -->
+            <img id="modalImage" 
+                 src="" 
+                 alt="" 
+                 class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-[0_0_30px_rgba(52,152,219,0.5)] border-2 border-[rgba(52,152,219,0.4)]">
+            <!-- Image Title -->
+            <p id="modalTitle" 
+               class="text-center text-white text-base mt-3"></p>
+        </div>
+    </div>
+
+    <script>
+        // Open modal
+        function openModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modalTitle.textContent = imageAlt;
+            
+            modal.style.display = 'flex';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // ESC key closes modal
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

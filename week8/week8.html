@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - Procesdocument</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-down': 'fadeInDown 0.8s ease',
+                    },
+                    keyframes: {
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            background: linear-gradient(135deg, rgb(26, 27, 74) 0%, rgb(15, 32, 68) 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="text-white font-['Segoe_UI',Tahoma,Geneva,Verdana,sans-serif] p-5 leading-relaxed">
+    <div class="max-w-[1400px] mx-auto bg-[rgba(40,42,90,0.6)] p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
+        <!-- Header -->
+        <h1 class="text-5xl font-bold text-white mb-8" style="text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);">
+            Week 8
+        </h1>
+        
+        <!-- Balk -->
+        <div class="bg-[rgba(52,152,219,0.3)] text-white text-xl py-3 px-6 rounded-lg mb-8 border-l-4 border-[#3498db]">
+            Overstap naar Tailwind CSS
+        </div>
+        
+        <!-- Intro Text -->
+        <p class="text-base text-white/90 leading-loose mb-12 max-w-[800px]">
+            Deze week was er een grote verandering: ik moest leren werken met Tailwind CSS. 
+            Dit betekende dat ik al mijn bestaande werk opnieuw moest bekijken en aanpassen aangezien ik dit niet eerder had gebruikt.
+        </p>
+
+        <!-- Tekst Sectie -->
+        <div class="space-y-8">
+            
+            <!-- Hoofdtekst Blok -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Moeilijkheden bij de overstap
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p>In de vorige weken had ik alles netjes opgezet met aparte HTML-bestanden en eigen CSS-bestanden. Ik had mijn kleuren en styling allemaal in mijn eigen CSS geschreven, 
+                        wat werkte maar best veel tijd kostte. Ik had eerder al ervaring met css en html en ik had het altijd al gedaan op die manier.
+                    </p>
+                    <p>Toen kwam de opdracht: ik moest Tailwind CSS gaan gebruiken. In het begin dacht ik: waarom? Mijn eigen CSS werkt toch prima? Maar al snel begreep ik dat Tailwind
+                         een heel andere manier van werken is. In plaats van aparte CSS-bestanden schrijf je de styling direct in je HTML met utility classes. Dus in plaats van
+                        <code>class="mijn-button"</code> met aparte CSS, schrijf je nu iets als <code>class="bg-blue-500 text-white px-4 py-2 rounded"</code>.
+                    </p>
+                    <p>Dit betekende dat ik alles moest gaan veranderen. Al mijn bestaande pagina's met hun eigen CSS moesten worden omgebouwd naar Tailwind. 
+                        Dat heeft best lang geduurd, want ik moest niet alleen Tailwind leren, maar ook al mijn oude werk opnieuw schrijven. Maar met behulp van
+                        AI ging het toch sneller dan als ik het alles helemaal opnieuw zelf had moeten uitschrijven.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Derde Tekstblok -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Reflectie
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p>
+                        Achteraf gezien was de overstap naar Tailwind best vervelend, vooral omdat ik al zoveel tijd had gestoken in mijn eigen CSS. Het voelde een beetje alsof ik opnieuw moest beginnen. Maar nu ik het een tijdje gebruik, zie ik wel de voordelen.
+                    </p>
+                    
+                    <p>
+                        Met Tailwind kun je veel sneller prototypen en aanpassingen maken. Je hoeft niet steeds nieuwe class namen te verzinnen of te zoeken in je CSS-bestand waar iets staat. Je schrijft gewoon direct wat je wilt in de HTML. Het voelt efficiënter, ook al ziet je HTML er nu wat drukker uit met al die classes.
+                    </p>
+                    
+                    <p>
+                        Ik heb ook gemerkt dat Tailwind je helpt om consistenter te zijn. Omdat je werkt met een vaste set aan utility classes (zoals <code>px-4</code>, <code>px-8</code>, enz.), gebruik je automatisch dezelfde spacing en kleuren door het hele project heen. Bij eigen CSS is het makkelijker om per ongeluk overal net iets andere waardes te gebruiken.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slot Tekstje -->
+            <div class="mt-8 p-6 bg-[rgba(20,25,60,0.4)] rounded-xl border-l-4 border-[#3498db]">
+                <h3 class="text-xl text-[#3498db] mb-3 font-semibold">Conclusie</h3>
+                <p class="text-white/80 leading-relaxed max-w-[800px]">
+                    De overstap naar Tailwind CSS was best een uitdaging. Alles wat ik in aparte HTML's en CSS-bestanden had gemaakt, moest ik omzetten naar Tailwind's utility classes. Het kostte veel tijd en moeite om alles te herschrijven en de nieuwe manier van werken onder de knie te krijgen. Maar nu ik het eenmaal begrijp, merk ik dat het werken met Tailwind sneller en consistenter is. Het was een waardevolle les in flexibiliteit en het leren van nieuwe tools.
+                </p>
+            </div>
+
+        </div>
+         <!-- Footer -->
+        <div class="mt-12 pt-8 border-t border-[rgba(52,152,219,0.3)] text-center text-white/60 text-sm">
+            Week 8 - Prototyping Tools Opdracht - Lea Christodoulou Wazni GDM1
+        </div>
+
+         <!-- Navigatie Knoppen -->
+        <div class="flex justify-between items-center mt-10">
+            <!-- Terug Knop Links -->
+            <a href="../index.html" 
+               class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                <span class="inline-block transition-transform">←</span>
+                Terug naar Overzicht
+            </a>
+            
+           <!-- Vorige + Volgende Knoppen Rechts -->
+            <div class="flex gap-3">
+                <a href="../week7/week7.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    <span class="inline-block transition-transform">←</span>
+                    Vorige Week
+                </a>
+                
+                <a href="../week9/week9.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    Volgende Week
+                    <span class="inline-block transition-transform">→</span>
+                </a>
+            </div>
+    </div>
+</body>
+</html>

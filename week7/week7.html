@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 - Prototyping Tools Opdracht</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            background: linear-gradient(135deg, rgb(26, 27, 74) 0%, rgb(15, 32, 68) 100%);
+            min-height: 100vh;
+        }
+        /* Shine effect voor images */
+        .shine-overlay {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+            transition: all 0.6s ease;
+            pointer-events: none;
+        }
+        .image-wrapper:hover .shine-overlay {
+            top: 100%;
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="text-white font-['Segoe_UI',Tahoma,Geneva,Verdana,sans-serif] p-5 leading-relaxed">
+    <div class="max-w-[1400px] mx-auto bg-[rgba(40,42,90,0.6)] p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
+        
+        <!-- Header -->
+        <h1 class="text-5xl font-bold text-white mb-8" style="text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);">
+            Week 7
+        </h1>
+        
+            <!-- Intro Text -->
+        <p class="text-base text-white/90 leading-loose mb-12 max-w-[800px]">
+            Deze week heb ik mijn drie borden vertaald naar gsm schermen.
+            Hiervoor moest ik enkele aanpassingen doen om de leesbaarheid en bruikbaarheid op een kleiner scherm te garanderen.
+            Bij elke foto is een korte uitleg te vinden van wat ik heb aangepast en waarom.
+            Hier is ook een figma link naar de ontwerpen: <a href="https://www.figma.com/design/402aDmSwh8SM7EESxoTxBE/Alle-schermen?node-id=0-1&t=7AfGy3OkFi0D05ac-1" class="text-[#3498db] underline">Figma Ontwerpen</a>.
+        </p>
+
+        <!-- LINEAIRE LAYOUT: UITLEG - FOTO - UITLEG - FOTO - UITLEG - FOTO - TEKSTJE -->
+        <div class="space-y-8">
+            
+            <!-- 1. UITLEG VERTREKBORD -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Vertrekbord
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p class="font-semibold">Hoe heb ik dit scherm aangepast voor mobiel gebruik?</p>
+                    <p><strong>Vereenvoudigde lay-out:</strong> Op een kleiner scherm is het cruciaal om de lay-out zo eenvoudig mogelijk te houden.
+                        Mijn vertrekbord had oorspronkelijk al enkel de essentiële informatie, maar ik had extra witruimte toegevoegd rond de tekst en elementen om het overzichtelijk te houden.
+                        Die ruimte moest ik nu verminderen om alles passend te krijgen zonder dat het te druk werd. Ik heb de lay-out van de teksten en kaders iets aangepast zodat ze beter op een smal scherm passen. 
+                        Bijvoorbeeld, ik heb de breedte van de kaders verminderd en sommige elementen dichter bij elkaar geplaatst. Voor de rest, was dit al een vrij simpel scherm waardoor er het niet moeilijk was om aanpassingen te maken.</p>
+                </div>
+            </div>
+
+            <!-- FOTO VERTREKBORD -->
+            <div class="flex justify-center">
+                <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                     onclick="openModal('vertrekbord.png', 'Vertrekbord')">
+                    <img src="vertrekbord.png" 
+                         alt="Vertrekbord" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="shine-overlay"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                            🔍 Klik
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. UITLEG PERRONSCHERM -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Perronscherm
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p class="font-semibold">Hoe heb ik dit scherm aangepast voor mobiel gebruik?</p>
+                    <p><strong>Scroll effect</strong>: Omdat het perronscherm veel informatie bevatte, heb ik ervoor gekozen om een scroll effect toe te voegen.
+                        In plaats van alles op één scherm te proppen, kunnen gebruikers nu naar beneden scrollen om de rest van de informatie te zien. Dit maakt het scherm veel gebruiksvriendelijker op een klein apparaat.
+                        Ik heb de belangrijkste aankomsttijden bovenaan gehouden, zodat gebruikers snel de meest relevante informatie kunnen zien zonder te hoeven scrollen. De rest zoals de treinvoorzieningen zitten beneden.</p>
+                    
+                </div>
+            </div>
+
+            <!-- FOTO PERRONSCHERM -->
+            <div class="flex justify-center">
+                <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                     onclick="openModal('perronsbord.png', 'Perronbord')">
+                    <img src="perronsbord.png" 
+                         alt="Perronscherm" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="shine-overlay"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                            🔍 Klik
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. UITLEG WAGONINDELING -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Wagonindeling
+                </h2>
+                 
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p class="font-semibold">Hoe heb ik dit scherm aangepast voor mobiel gebruik?
+                    <p><strong>Lay-out en extra knoppen</strong> : Voor de wagonindeling heb ik de veel van de lay-out aangepast zodat deze beter past op een smal scherm.
+                        Het oorspronkelijk ontwerp bevatte heel veel invormatie die moeilijk te lezen zou zijn op een klein scherm.Ik had dus geen andere optie dan
+                        extra knoppen toe te voegen waarmee gebruikers specifieke informatie konden vinden zoals de haltes.
+                        Daarnaast heb ik hier ook het scroll effect toegepast zodat gebruikers naar beneden kunnen scrollen voor meer details over de wagonindeling.
+                        Aangezien elk wagon zijn eigen kader heeft met de voorzieningen vond ik het niet meer nodig om symbolen te gebruiken, die heb ik dus weggedaan.</p>
+
+                
+                </div>
+            </div>
+
+            <!-- FOTO WAGONINDELING -->
+            <div class="flex justify-center">
+                <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                     onclick="openModal('wagonscherm.png', 'wagonscherm')">
+                    <img src="wagonscherm.png" 
+                         alt="Wagonindeling" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="shine-overlay"></div>
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                            🔍 Klik
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLOT TEKSTJE -->
+            <div class="mt-8 p-6 bg-[rgba(20,25,60,0.4)] rounded-xl border-l-4 border-[#3498db]">
+                <h3 class="text-xl text-[#3498db] mb-3 font-semibold">Conclusie</h3>
+                <p class="text-white/80 leading-relaxed max-w-[800px]">
+                    Al met al was het vertalen van de borden naar gsm schermen een interessante uitdaging.
+                    Het vereiste aanpassingen in lay-out, informatiehiërarchie en interactieontwerp om ervoor te zorgen dat de schermen gebruiksvriendelijk en effectief blijven op een kleiner formaat.
+                    Door deze veranderingen kon ik ervoor zorgen dat de kernfunctionaliteit behouden bleef, terwijl ik ook rekening hield met de beperkingen en mogelijkheden van mobiele apparaten.
+            </div>
+
+        </div>
+         <!-- Footer -->
+        <div class="mt-12 pt-8 border-t border-[rgba(52,152,219,0.3)] text-center text-white/60 text-sm">
+            Week 7 - Prototyping Tools Opdracht - Lea Christodoulou Wazni GDM1
+        </div>
+
+         <!-- Navigatie Knoppen -->
+        <div class="flex justify-between items-center mt-10">
+            <!-- Terug Knop Links -->
+            <a href="../index.html" 
+               class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                <span class="inline-block transition-transform">←</span>
+                Terug naar Overzicht
+            </a>
+            
+           <!-- Vorige + Volgende Knoppen Rechts -->
+            <div class="flex gap-3">
+                <a href="../week6/week6.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    <span class="inline-block transition-transform">←</span>
+                    Vorige Week
+                </a>
+                
+                <a href="../week8/week8.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    Volgende Week
+                    <span class="inline-block transition-transform">→</span>
+                </a>
+            </div>
+    </div>
+
+    <!-- IMAGE MODAL (500px) -->
+    <div id="imageModal" 
+         style="display: none;"
+         class="fixed inset-0 bg-black/85 z-50 items-center justify-center p-8"
+         onclick="closeModal()">
+        <div class="relative max-w-[500px] max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <button onclick="closeModal()" 
+                    class="absolute -top-10 right-0 text-white text-2xl hover:text-[#3498db] transition-all duration-300 hover:rotate-90 hover:scale-110">
+                ✕
+            </button>
+            <!-- Image ( 500px breed, max 85vh hoog) -->
+            <img id="modalImage" 
+                 src="" 
+                 alt="" 
+                 class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-[0_0_30px_rgba(52,152,219,0.5)] border-2 border-[rgba(52,152,219,0.4)]">
+            <!-- Image Title -->
+            <p id="modalTitle" 
+               class="text-center text-white text-base mt-3"></p>
+        </div>
+    </div>
+
+    <script>
+        // Open modal
+        function openModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modalTitle.textContent = imageAlt;
+            
+            modal.style.display = 'flex';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // ESC key closes modal
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

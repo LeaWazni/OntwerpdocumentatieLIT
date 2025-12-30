@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - Prototyping Tools Opdracht</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            background: linear-gradient(135deg, rgb(26, 27, 74) 0%, rgb(15, 32, 68) 100%);
+            min-height: 100vh;
+        }
+        /* Shine effect voor images */
+        .shine-overlay {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transition: all 0.6s ease;
+            pointer-events: none;
+        }
+        .image-wrapper:hover .shine-overlay {
+            top: 100%;
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="text-white font-['Segoe_UI',Tahoma,Geneva,Verdana,sans-serif] c:\Users\Wazni\OneDrive\Documents\Ontwerpdocumentatie.pdfp-5 leading-relaxed">
+    <div class="max-w-[1400px] mx-auto bg-[rgba(40,42,90,0.6)] p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
+        
+        <!-- Header -->
+        <h1 class="text-5xl font-bold text-white mb-8" style="text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);">
+            Week 1
+        </h1>
+        
+        <!-- Balk -->
+        <div class="bg-[rgba(52,152,219,0.3)] text-white text-xl py-3 px-6 rounded-lg mb-8 border-l-4 border-[#3498db]">
+            Schetsen treinborden
+        </div>
+        
+        <!-- Intro Text -->
+        <p class="text-base text-white/90 leading-loose mb-12 max-w-[800px]">
+            Om te beginnen heb ik schetsen gemaakt geïnspireerd op treinborden. 
+            Hiervoor heb ik online verschillende treinborden opgezocht en bekeken welke 
+            stijl ik het mooist vond. Die stijl heb ik vervolgens als uitgangspunt genomen en 
+            eerst in een schets uitgewerkt.
+        </p>
+
+        <!-- LINEAIRE LAYOUT: UITLEG - FOTO - UITLEG - FOTO - UITLEG - FOTO -->
+        <div class="space-y-8">
+            
+            <!-- 1. UITLEG VERTREKBORD -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Vertrekbord
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed max-w-[800px]">
+                    <p>Voor mijn vertrekborden heb ik vooral inspiratie gehaald uit bestaande vertrekborden en foto’s die ik online heb gevonden. Vertrekborden moeten vooral simpel en duidelijk zijn: belangrijke informatie moet meteen opvallen en snel leesbaar zijn. Daarom heb ik in alle drie de schetsen gewerkt met duidelijke kolommen en afbakeningen. Op die manier wordt de informatie logisch gestructureerd en kan de reiziger in één oogopslag zien wat relevant is. Ik heb bewust gekozen voor een rustige opmaak, zodat het bord overzichtelijk blijft, ook wanneer er veel informatie wordt weergegeven.</p>
+                </div>
+            </div>
+
+            <!-- FOTO'S VERTREKBORD -->
+            <div class="flex justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Afbeelding 1 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Vertrekbord1.jpg', 'Vertrekbord schets 1')">
+                        <img src="Vertrekbord1.jpg" 
+                             alt="Vertrekbord schets 1" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Afbeelding 2 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Vertrekbord2.jpg', 'Vertrekbord schets 2')">
+                        <img src="Vertrekbord2.jpg" 
+                             alt="Vertrekbord schets 2" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Afbeelding 3 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Vertrekbord3.jpg', 'Vertrekbord schets 3')">
+                        <img src="Vertrekbord3.jpg" 
+                             alt="Vertrekbord schets 3" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. UITLEG PERRONBORD -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Perronbord
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed max-w-[800px]">
+                    <p>Perronschermen zijn vrij vanzelfsprekend in hun functie: het zijn informatieschermen waarop je kunt zien wanneer welke trein aankomt of vertrekt. Er waren daarom niet veel alternatieven naast een verticale ordening van de treinen, met de tijd ernaast. Binnen die vaste structuur heb ik vooral geëxperimenteerd met de inhoud en hiërarchie van het bord. Ik heb onderzocht welk element het belangrijkst is om te laten opvallen. In de ene versie heb ik het spoornummer vooropgezet, in een andere versie de naam van de trein, namelijk “Namen”. Daarnaast leek het mij nuttig om ook treinvoorzieningen toe te voegen, omdat die extra informatie kunnen bieden voor reizigers. Zo heb ik geprobeerd een balans te vinden tussen duidelijkheid en volledigheid.</p>
+                </div>
+            </div>
+
+            <!-- FOTO'S PERRONBORD -->
+            <div class="flex justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Afbeelding 1 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Perronbord1.jpg', 'Perronbord schets 1')">
+                        <img src="Perronbord1.jpg" 
+                             alt="Perronbord schets 1" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Afbeelding 2 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Perronbord2.jpg', 'Perronbord schets 2')">
+                        <img src="Perronbord2.jpg" 
+                             alt="Perronbord schets 2" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Afbeelding 3 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Perronbord3.jpg', 'Perronbord schets 3')">
+                        <img src="Perronbord3.jpg" 
+                             alt="Perronbord schets 3" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. UITLEG WAGONINDELING -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Wagonindeling
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed max-w-[800px]">
+                    <p>Voor het wagonscherm had ik veel meer ontwerpmogelijkheden. Hierbij heb ik vooral zelf nagedacht over welke informatie belangrijk is voor reizigers en hoe die het best gepresenteerd kan worden. Ik heb geëxperimenteerd met symbolen om de voorzieningen weer te geven, omdat ik dit de meest duidelijke en visueel aantrekkelijke manier vond. Daarnaast heb ik verschillende lay-outs uitgeprobeerd. Uiteindelijk denk ik dat het belangrijkste is dat de wagons duidelijk in het midden staan en dat in één oogopslag te zien is welke wagon welke voorzieningen heeft. Zo kan de reiziger snel bepalen waar hij of zij moet instappen, wat bijdraagt aan een vlottere doorstroming op het perron.</p>
+                </div>
+            </div>
+
+            <!-- FOTO'S WAGONINDELING -->
+            <div class="flex justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Afbeelding 1 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Wagonindeling1.jpg', 'Wagonindeling schets 1')">
+                        <img src="Wagonindeling1.jpg" 
+                             alt="Wagonindeling schets 1" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Afbeelding 2 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Wagonindeling2.jpg', 'Wagonindeling schets 2')">
+                        <img src="Wagonindeling2.jpg" 
+                             alt="Wagonindeling schets 2" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Afbeelding 3 -->
+                    <div class="image-wrapper group relative overflow-hidden rounded-xl border-2 border-[rgba(52,152,219,0.2)] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(52,152,219,0.6)] hover:shadow-[0_10px_30px_rgba(52,152,219,0.4)] cursor-pointer w-60 h-60"
+                         onclick="openModal('Wagonindeling3.jpg', 'Wagonindeling schets 3')">
+                        <img src="Wagonindeling3.jpg" 
+                             alt="Wagonindeling schets 3" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="shine-overlay"></div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                            <span class="text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[rgba(52,152,219,0.9)] px-3 py-1 rounded-lg font-bold">
+                                🔍 Klik
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-12 pt-8 border-t border-[rgba(52,152,219,0.3)] text-center text-white/60 text-sm">
+            Week 1 - Prototyping Tools Opdracht - Lea Christodoulou Wazni GDM1
+        </div>
+
+        <!-- Navigatie Knoppen -->
+        <div class="flex justify-between items-center mt-10">
+            <!-- Terug Knop Links -->
+            <a href="../index.html" 
+               class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                <span class="inline-block transition-transform">←</span>
+                Terug naar Overzicht
+            </a>
+            
+                <a href="../week2/week2.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    Volgende Week
+                    <span class="inline-block transition-transform">→</span>
+                </a>
+            </div>
+    </div>
+
+    <!-- IMAGE MODAL (IETSJE GROTER - 500px) -->
+    <div id="imageModal" 
+         style="display: none;"
+         class="fixed inset-0 bg-black/85 z-50 items-center justify-center p-8"
+         onclick="closeModal()">
+        <div class="relative max-w-[500px] max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <button onclick="closeModal()" 
+                    class="absolute -top-10 right-0 text-white text-2xl hover:text-[#3498db] transition-all duration-300 hover:rotate-90 hover:scale-110">
+                ✕
+            </button>
+            <!-- Image (IETSJE GROTER - 500px breed) -->
+            <img id="modalImage" 
+                 src="" 
+                 alt="" 
+                 class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-[0_0_30px_rgba(52,152,219,0.5)] border-2 border-[rgba(52,152,219,0.4)]">
+            <!-- Image Title -->
+            <p id="modalTitle" 
+               class="text-center text-white text-base mt-3"></p>
+        </div>
+    </div>
+
+    <script>
+        // Open modal met vergroot afbeelding (niet full screen)
+        function openModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImg.src = imageSrc;
+            modalImg.alt = imageAlt;
+            modalTitle.textContent = imageAlt;
+            
+            modal.style.display = 'flex';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal met ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

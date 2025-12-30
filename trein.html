@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trein — Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- header/top -->
+    <div class="topbar">
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:13px;color:var(--muted);">Vertrek: <strong>14:42</strong> &nbsp;&nbsp; Spoor: <strong>7</strong></div>
+        <div style="font-size:22px;color:var(--accent-yellow);font-weight:800;margin-top:6px;">Wagons Oostende → Namen <span style="margin-left:14px;" class="badge ic">IC&nbsp;2419</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="small-muted">Huidige tijd</div>
+        <div class="clock">12:08</div>
+      </div>
+    </div>
+
+    <!-- wagon + haltes layout -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px;">
+      <div class="panel">
+        <div class="detail-top">
+          <div class="detail-left">
+            <div class="icon-round">🚆</div>
+            <div>
+              <div style="font-size:14px;color:var(--muted)">Spoor / Voie</div>
+              <div style="font-size:20px;font-weight:700">7</div>
+            </div>
+          </div>
+
+          <div style="text-align:right;">
+            <div class="small-muted">Vertrek</div>
+            <div style="font-size:28px;font-weight:800">14:42</div>
+            <div class="status ok" style="margin-top:6px;">● Op tijd</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <div class="h2">Trein naar <span style="font-size:24px;font-weight:800;color:white;margin-left:6px;">Namen</span></div>
+          <div class="small-muted" style="margin-top:8px;">IC 2419</div>
+        </div>
+
+        <!-- stops -->
+        <div class="stops" style="margin-top:14px;">
+          <div class="stop"><div>Namen</div><div class="time">14:42</div></div>
+          <div class="stop"><div>Namen</div><div class="time">14:58</div></div>
+          <div class="stop"><div>Namen</div><div class="time">15:18</div></div>
+          <div class="stop"><div>Namen</div><div class="time">15:38</div></div>
+          <div class="stop"><div>Namen</div><div class="time">15:52</div></div>
+          <div class="stop"><div>-</div><div class="time">-</div></div>
+          <div class="stop"><div>-</div><div class="time">-</div></div>
+          <div class="stop"><div>-</div><div class="time">-</div></div>
+          <div class="stop"><div>-</div><div class="time">-</div></div>
+          <div class="stop"><div>-</div><div class="time">-</div></div>
+        </div>
+
+        <div class="panel" style="margin-top:14px;">
+          <div class="h2">Treinsamenstelling</div>
+          <div class="small-muted">Aantal wagons: <strong>8</strong></div>
+          <div style="margin-top:10px;">
+            <span class="icon-pill">1ste klas</span>
+            <span class="icon-pill">2de klas</span>
+            <span class="icon-pill">Toegankelijkheid</span>
+            <span class="icon-pill">Fietsplaatsen</span>
+            <span class="icon-pill">Bar</span>
+          </div>
+        </div>
+
+        <div class="small-muted" style="margin-top:12px;">
+          • Controleer uw bestemming op het scherm boven de wagon<br>
+          • 1ste klas wagons bevinden zich meestal aan de voorkant van de trein<br>
+          • Blijf achter de gele lijn tot de trein volledig gestopt is
+        </div>
+      </div>
+
+      <!-- rechter kolom: uitgebreide stops + legenda / kaart -->
+      <div>
+        <div class="panel">
+          <div class="h2">Haltes & Tijden</div>
+          <div class="stops" style="margin-top:8px;">
+            <div class="stop"><div>Oostende / Oostend</div><div class="time">14:42</div></div>
+            <div class="stop"><div>Brugge / Bruges</div><div class="time">14:48</div></div>
+            <div class="stop"><div>Gent-Sint-Pieters</div><div class="time">15:08</div></div>
+            <div class="stop"><div>Brussels-Midi</div><div class="time">15:26</div></div>
+            <div class="stop"><div>Brussels-Central</div><div class="time">15:32</div></div>
+            <div class="stop"><div>Brussels-North</div><div class="time">15:38</div></div>
+            <div class="stop"><div>Leuven / Löwen / Louvain</div><div class="time">15:54</div></div>
+            <div class="stop"><div>Liège-Guillemins</div><div class="time">16:48</div></div>
+            <div class="stop"><div>Gembloux</div><div class="time">17:02</div></div>
+            <div class="stop"><div>Namur / Namen</div><div class="time">17:18</div></div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:14px;">
+          <div class="h2">Legenda Voorzieningen</div>
+          <div class="legend">
+            <div class="item">📶 <span style="margin-left:6px">WiFi</span></div>
+            <div class="item">🚲 <span style="margin-left:6px">Fiets</span></div>
+            <div class="item">🍸 <span style="margin-left:6px">Bar</span></div>
+            <div class="item">♿ <span style="margin-left:6px">Toegankelijk</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+

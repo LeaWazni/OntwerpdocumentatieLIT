@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 - Procesdocument</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-down': 'fadeInDown 0.8s ease',
+                    },
+                    keyframes: {
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            background: linear-gradient(135deg, rgb(26, 27, 74) 0%, rgb(15, 32, 68) 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="text-white font-['Segoe_UI',Tahoma,Geneva,Verdana,sans-serif] p-5 leading-relaxed">
+    <div class="max-w-[1400px] mx-auto bg-[rgba(40,42,90,0.6)] p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
+        <!-- Header -->
+        <h1 class="text-5xl font-bold text-white mb-8" style="text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);">
+            Week 9
+        </h1>
+        
+        <!-- Balk -->
+        <div class="bg-[rgba(52,152,219,0.3)] text-white text-xl py-3 px-6 rounded-lg mb-8 border-l-4 border-[#3498db]">
+            Interactieve schermen in Figma
+        </div>
+        
+        <!-- Intro Text -->
+        <p class="text-base text-white/90 leading-loose mb-12 max-w-[800px]">
+         In week 9 heb ik mijn Figma ontwerpen omgezet naar interactieve prototypes die op een mobiel apparaat kunnen worden bekeken. 
+            Dit hield in dat ik knoppen en navigatie-elementen heb toegevoegd zodat gebruikers door de verschillende schermen kunnen navigeren alsof ze een echte app gebruiken.
+            Dit is een link naar het interactieve prototype: <a href="https://www.figma.com/design/hQ7IH1Mvlhn76IVmnFcESz/Interactieve-schermen?node-id=0-1&t=hmkbIAqQhOemMtjR-1" class="text-[#3498db] underline hover:text-[#5dade2]">Interactief Figma Prototype</a>
+    
+        <!-- Tekst Sectie -->
+         <div class="space-y-8">
+            <div></div>
+            <!-- Hoofdtekst Blok -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Aanmaak van extra schermen
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p> De eerste stap bij het interactief maken van mijn schermen, was om extra schermen te maken.
+                        Je kan natuurlijk geen app maken met enkel 3 schermen, dus heb ik al de knopjes die ik had toegevoegd
+                        interactief gemaakt door schermen ervoor te maken. Dit ging vrij snel aangezien ik mijn vorige schermen
+                        had om mij op te baseren. Wat ik wel merkte is dat ik had onderschat hoeveek schermen ik nodig zou hebben.
+                        Elke keer dat er een nieuw scherm bijkwam, kwamen er nieuwe knopjes bij waardoor er nog schermen moesten
+                        worden gemaakt. Hierdoor heeft dit wel een paar dagen geduurd, want nadenken aan de lay-out van al die schermen
+                        heeft natuurlijk ook wat tijd gepakt.
+                    </p>
+                </div>
+            </div>
+            <!-- Tweede Tekst Blok -->
+            <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Interactieve elementen toevoegen
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p> Nadat ik alle schermen had aangemaakt, was het tijd om de interactieve elementen toe te voegen.
+                        In Figma kan je dit doen door een element te selecteren en vervolgens een 'Prototype' link te maken
+                        naar een ander scherm. Dit proces was vrij eenvoudig, maar het kostte wel wat tijd om alles goed
+                        in te stellen. Ik moest ervoor zorgen dat alle knoppen naar de juiste schermen leidden en dat de
+                        navigatie logisch was voor de gebruiker. Daarnaast heb ik ook wat animaties toegevoegd om de
+                        overgangen tussen schermen vloeiender te maken.
+                    </p>
+                </div>  
+        </div>
+ <!--slot tekst -->
+             <div class="bg-[rgba(20,25,60,0.4)] p-6 rounded-xl border-l-4 border-[#3498db]">
+                <h2 class="text-2xl text-[#3498db] mb-3" 
+                    style="text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);">
+                    Reflectie
+                </h2>
+                
+                <div class="text-white/80 leading-relaxed space-y-4 max-w-[800px]">
+                    <p> Al met al was het proces van het maken van interactieve schermen in Figma een leerzame ervaring.
+                        Het gaf me een beter inzicht in hoe gebruikers met een app zouden omgaan en hoe belangrijk
+                        een goede navigatie is. Ik ben tevreden met het eindresultaat en kijk ernaar uit om deze
+                        vaardigheden in toekomstige projecten toe te passen.
+                    </p>
+                </div>
+            </div>
+        </div>
+         <!-- Footer -->
+        <div class="mt-12 pt-8 border-t border-[rgba(52,152,219,0.3)] text-center text-white/60 text-sm">
+            Week 9 - Prototyping Tools Opdracht - Lea Christodoulou Wazni GDM1
+        </div>
+ <!-- Navigatie Knoppen -->
+        <div class="flex justify-between items-center mt-10">
+            <!-- Terug Knop Links -->
+            <a href="../index.html" 
+               class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                <span class="inline-block transition-transform">←</span>
+                Terug naar Overzicht
+            </a>
+            
+            <!-- Vorige + Volgende Knoppen Rechts -->
+            <div class="flex gap-3">
+                <a href="../week8/week8.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:-translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    <span class="inline-block transition-transform">←</span>
+                    Vorige Week
+                </a>
+                
+                <a href="../week10/week10.html" 
+                   class="inline-flex items-center gap-2 py-4 px-9 bg-gradient-to-br from-[#3498db] to-[#2980b9] text-white no-underline rounded-lg font-bold text-base transition-all duration-300 shadow-[0_4px_15px_rgba(52,152,219,0.3)] hover:bg-gradient-to-br hover:from-[#2980b9] hover:to-[#1f6391] hover:translate-x-2 hover:shadow-[0_6px_20px_rgba(52,152,219,0.5)] hover:gap-3">
+                    Volgende Week
+                    <span class="inline-block transition-transform">→</span>
+                </a>
+            </div>
+    </div>
+</body>
+</html>
